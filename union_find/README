@@ -1,0 +1,17 @@
+Algorithm    :  Initialize : Union   : Connected
+quick-find   :    N        :  N      :    1
+quick-union  :    N        :  N      :    N
+Weighted QU  :    N        :  lg(N)  :    lg(N)
+where lg = log to base 2
+
+
+Weighted QU with Path Compression = lg(N) --> constant time. Thereby making it linear runtime
+To do so make every other node in path point to its grandparents. This keeps tree completely flat:
+
+"
+..
+id[i] = id[id[i]]
+i = id[i]
+...
+"
+
